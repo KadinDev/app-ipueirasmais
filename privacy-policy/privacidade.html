@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0714" />
+    <meta
+      name="description"
+      content="Política de Privacidade do aplicativo Ipueiras+."
+    />
+    <title>Política de Privacidade | Ipueiras+</title>
+    <style>
+      :root {
+        --background: #0b0714;
+        --surface: #151022;
+        --surface-soft: #1c142a;
+        --border: rgba(255, 255, 255, 0.1);
+        --text: #ffffff;
+        --muted: #b7a8c8;
+        --soft: #d8cfe7;
+        --primary: #ff7a00;
+        --primary-soft: rgba(255, 122, 0, 0.12);
+        --purple: #8b1cf6;
+        --max-width: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 88% 2%,
+            rgba(139, 28, 246, 0.2),
+            transparent 30rem
+          ),
+          radial-gradient(
+            circle at 8% 22%,
+            rgba(255, 122, 0, 0.08),
+            transparent 26rem
+          ),
+          var(--background);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+      button {
+        font: inherit;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        padding: 10px 14px;
+        border-radius: 8px;
+        color: #111;
+        background: var(--primary);
+        transform: translateY(-160%);
+      }
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--border);
+        background: rgba(11, 7, 20, 0.82);
+        backdrop-filter: blur(18px);
+      }
+      .topbar-inner {
+        width: min(calc(100% - 40px), var(--max-width));
+        min-height: 68px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: baseline;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+      }
+      .brand span {
+        color: var(--primary);
+      }
+      .print-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        color: var(--soft);
+        background: var(--surface);
+        cursor: pointer;
+      }
+      .print-button:hover {
+        border-color: rgba(255, 122, 0, 0.5);
+        color: #fff;
+      }
+
+      .hero {
+        width: min(calc(100% - 40px), var(--max-width));
+        margin: 0 auto;
+        padding: 88px 0 68px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before {
+        width: 24px;
+        height: 2px;
+        border-radius: 99px;
+        background: var(--primary);
+        content: "";
+      }
+      h1 {
+        max-width: 850px;
+        margin: 0;
+        font-size: clamp(2.45rem, 7vw, 5.1rem);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+      }
+      .hero-description {
+        max-width: 720px;
+        margin: 28px 0 0;
+        color: var(--soft);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 24px;
+        margin-top: 30px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .meta strong {
+        color: var(--text);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 44px;
+      }
+      .summary-card {
+        min-height: 150px;
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: linear-gradient(
+          145deg,
+          rgba(28, 20, 42, 0.96),
+          rgba(21, 16, 34, 0.82)
+        );
+      }
+      .summary-number {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .summary-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .summary-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .page-layout {
+        width: min(calc(100% - 40px), var(--max-width));
+        margin: 0 auto;
+        padding: 20px 0 100px;
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        align-items: start;
+        gap: 58px;
+      }
+      .toc {
+        position: sticky;
+        top: 96px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(21, 16, 34, 0.72);
+      }
+      .toc-title {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .toc a {
+        display: block;
+        padding: 6px 0;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .toc a:hover,
+      .toc a:focus {
+        color: var(--primary);
+      }
+
+      main {
+        min-width: 0;
+      }
+      .policy-section {
+        scroll-margin-top: 100px;
+        padding: 0 0 42px;
+        margin-bottom: 42px;
+        border-bottom: 1px solid var(--border);
+      }
+      .policy-section:last-child {
+        border-bottom: 0;
+      }
+      h2 {
+        margin: 0 0 20px;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        line-height: 1.2;
+        letter-spacing: -0.035em;
+      }
+      h3 {
+        margin: 26px 0 8px;
+        font-size: 1rem;
+      }
+      p {
+        margin: 0 0 16px;
+        color: var(--soft);
+      }
+      ul {
+        margin: 12px 0 18px;
+        padding-left: 22px;
+        color: var(--soft);
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      strong {
+        color: var(--text);
+      }
+
+      .notice {
+        padding: 18px 20px;
+        margin: 22px 0;
+        border: 1px solid rgba(255, 122, 0, 0.35);
+        border-radius: 12px;
+        background: var(--primary-soft);
+      }
+      .notice p {
+        margin: 0;
+      }
+      .data-table {
+        width: 100%;
+        margin: 22px 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-size: 14px;
+      }
+      .data-table th,
+      .data-table td {
+        padding: 15px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+      }
+      .data-table th {
+        color: var(--text);
+        background: var(--surface-soft);
+      }
+      .data-table td {
+        color: var(--soft);
+      }
+      .data-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .contact-card {
+        padding: 28px;
+        border: 1px solid rgba(255, 122, 0, 0.4);
+        border-radius: 16px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(255, 122, 0, 0.13),
+            rgba(139, 28, 246, 0.09)
+          ),
+          var(--surface);
+      }
+      .contact-label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .contact-value {
+        color: var(--text);
+        font-weight: 800;
+        overflow-wrap: anywhere;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+      }
+      .footer-inner {
+        width: min(calc(100% - 40px), var(--max-width));
+        margin: auto;
+        padding: 28px 0 36px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 13px;
+      }
+
+      @media (max-width: 840px) {
+        .hero {
+          padding-top: 64px;
+        }
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+        .summary-card {
+          min-height: auto;
+        }
+        .page-layout {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+        .toc {
+          position: static;
+        }
+        .toc nav {
+          columns: 2;
+          column-gap: 24px;
+        }
+      }
+      @media (max-width: 540px) {
+        .topbar-inner,
+        .hero,
+        .page-layout,
+        .footer-inner {
+          width: min(calc(100% - 28px), var(--max-width));
+        }
+        .print-button {
+          display: none;
+        }
+        .hero {
+          padding: 50px 0 48px;
+        }
+        .toc nav {
+          columns: 1;
+        }
+        .data-table,
+        .data-table tbody,
+        .data-table tr,
+        .data-table td {
+          display: block;
+        }
+        .data-table thead {
+          display: none;
+        }
+        .data-table tr {
+          border-bottom: 1px solid var(--border);
+        }
+        .data-table tr:last-child {
+          border-bottom: 0;
+        }
+        .data-table td {
+          border: 0;
+          padding: 12px 15px;
+        }
+        .data-table td::before {
+          display: block;
+          margin-bottom: 3px;
+          color: var(--muted);
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          content: attr(data-label);
+        }
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+        }
+        body {
+          color: #111;
+          background: #fff;
+          font-size: 11pt;
+        }
+        .topbar,
+        .toc,
+        .summary-grid,
+        .print-button {
+          display: none;
+        }
+        .hero,
+        .page-layout {
+          width: 100%;
+          padding: 20px 0;
+          display: block;
+        }
+        .hero {
+          border-bottom: 2px solid #111;
+        }
+        h1,
+        h2,
+        h3,
+        strong,
+        .brand,
+        .contact-value {
+          color: #111;
+        }
+        p,
+        li,
+        .hero-description,
+        .meta,
+        .data-table td {
+          color: #333;
+        }
+        .policy-section {
+          break-inside: avoid;
+          border-color: #bbb;
+        }
+        .notice,
+        .contact-card {
+          color: #111;
+          background: #f5f5f5;
+          border-color: #999;
+        }
+        footer {
+          border-color: #bbb;
+          color: #555;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Voltar ao site Ipueiras mais"
+          >Ipueiras<span>+</span></a
+        >
+        <button class="print-button" type="button" onclick="window.print()">
+          Imprimir ou salvar em PDF
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" id="inicio">
+      <span class="eyebrow">Transparência e confiança</span>
+      <h1>Política de Privacidade</h1>
+      <p class="hero-description">
+        Esta política explica, de forma clara, como o aplicativo Ipueiras+ trata
+        informações durante o uso de seus serviços e quais são os seus direitos.
+      </p>
+      <div class="meta">
+        <span><strong>Última atualização:</strong> 7 de agosto de 2026</span>
+        <span><strong>Aplicável a:</strong> aplicativo Ipueiras+</span>
+      </div>
+
+      <div class="summary-grid" aria-label="Resumo da política">
+        <article class="summary-card">
+          <span class="summary-number">01</span>
+          <strong>Sem cadastro obrigatório</strong>
+          <p>
+            O Ipueiras+ pode ser utilizado sem criar conta e sem informar nome,
+            CPF, telefone ou e-mail.
+          </p>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number">02</span>
+          <strong>Sem localização do aparelho</strong>
+          <p>
+            O app exibe locais cadastrados, mas não solicita acesso à
+            localização precisa do usuário.
+          </p>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number">03</span>
+          <strong>Uso responsável de dados</strong>
+          <p>
+            Dados técnicos e métricas limitadas são usados para operar, proteger
+            e melhorar o serviço.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc" aria-label="Índice desta política">
+        <span class="toc-title">Nesta página</span>
+        <nav>
+          <a href="#sobre">1. Sobre esta política</a>
+          <a href="#dados">2. Informações tratadas</a>
+          <a href="#finalidades">3. Como usamos</a>
+          <a href="#bases-legais">4. Bases legais</a>
+          <a href="#compartilhamento">5. Compartilhamento</a>
+          <a href="#servicos-terceiros">6. Serviços terceiros</a>
+          <a href="#armazenamento">7. Armazenamento</a>
+          <a href="#seguranca">8. Segurança</a>
+          <a href="#links">9. Links e recursos externos</a>
+          <a href="#direitos">10. Seus direitos</a>
+          <a href="#criancas">11. Crianças e adolescentes</a>
+          <a href="#alteracoes">12. Alterações</a>
+          <a href="#contato">13. Contato</a>
+        </nav>
+      </aside>
+
+      <main id="conteudo">
+        <section class="policy-section" id="sobre">
+          <h2>1. Sobre esta política</h2>
+          <p>
+            O Ipueiras+ é um aplicativo informativo voltado à divulgação de
+            notícias, eventos, avisos públicos, empresas, promoções, vagas e
+            outras informações de interesse local relacionadas ao município de
+            Ipueiras.
+          </p>
+          <p>
+            Esta Política de Privacidade descreve as práticas adotadas no
+            tratamento de informações no aplicativo, em conformidade com a Lei
+            nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD) — e
+            demais normas aplicáveis.
+          </p>
+          <p>
+            Ao utilizar o aplicativo, você reconhece que leu esta política.
+            Quando uma funcionalidade exigir uma escolha específica,
+            apresentaremos as informações necessárias no momento apropriado.
+          </p>
+        </section>
+
+        <section class="policy-section" id="dados">
+          <h2>2. Informações que podem ser tratadas</h2>
+          <h3>2.1. Informações que não solicitamos diretamente</h3>
+          <p>
+            O aplicativo não exige cadastro de usuário. Em sua versão atual, não
+            solicitamos diretamente nome, CPF, data de nascimento, endereço
+            residencial, telefone, e-mail, senha, lista de contatos, fotos
+            pessoais ou localização precisa do aparelho.
+          </p>
+
+          <h3>2.2. Informações técnicas</h3>
+          <p>
+            Para que o aplicativo se comunique com os serviços necessários,
+            determinados dados técnicos podem ser processados automaticamente
+            pelos provedores de infraestrutura, como endereço IP, tipo de
+            dispositivo, sistema operacional, data e horário da requisição e
+            registros de falhas ou segurança.
+          </p>
+
+          <h3>2.3. Métricas de interação</h3>
+          <p>
+            O Ipueiras+ pode registrar eventos limitados de uso, como cliques em
+            botões de WhatsApp, Instagram, compartilhamento, rotas, ingressos e
+            banners. Essas métricas servem para compreender o desempenho do
+            conteúdo e melhorar o serviço. Não buscamos utilizá-las para
+            identificar individualmente o usuário.
+          </p>
+
+          <h3>2.4. Dados armazenados no aparelho</h3>
+          <p>
+            O aplicativo pode manter temporariamente no dispositivo cópias de
+            conteúdos públicos, preferências e horários de atualização. Esse
+            armazenamento local reduz consumo de dados, melhora a velocidade e
+            permite apresentar informações recentes enquanto uma nova consulta é
+            realizada.
+          </p>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Exemplos</th>
+                <th>Finalidade principal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Categoria">Dados técnicos</td>
+                <td data-label="Exemplos">
+                  IP, aparelho, sistema, data e horário
+                </td>
+                <td data-label="Finalidade">
+                  Operação, segurança e diagnóstico
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Categoria">Métricas de interação</td>
+                <td data-label="Exemplos">
+                  Tipo de botão e conteúdo relacionado
+                </td>
+                <td data-label="Finalidade">
+                  Análise agregada e melhoria do app
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Categoria">Armazenamento local</td>
+                <td data-label="Exemplos">Conteúdo público em cache</td>
+                <td data-label="Finalidade">Desempenho e economia de dados</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="policy-section" id="finalidades">
+          <h2>3. Como usamos as informações</h2>
+          <p>As informações tratadas podem ser utilizadas para:</p>
+          <ul>
+            <li>disponibilizar e manter as funcionalidades do Ipueiras+;</li>
+            <li>
+              carregar notícias, eventos, avisos, empresas, vagas e demais
+              conteúdos;
+            </li>
+            <li>mostrar a previsão do tempo referente a Ipueiras;</li>
+            <li>exibir no mapa locais previamente cadastrados no sistema;</li>
+            <li>
+              permitir que o usuário acione voluntariamente compartilhamento e
+              aplicativos externos;
+            </li>
+            <li>
+              medir, de forma limitada, a interação com conteúdos e ações;
+            </li>
+            <li>
+              prevenir abusos, investigar falhas e proteger a disponibilidade do
+              serviço;
+            </li>
+            <li>
+              cumprir obrigações legais ou responder a determinações de
+              autoridades competentes.
+            </li>
+          </ul>
+          <div class="notice">
+            <p>
+              <strong>Importante:</strong> o mapa apresenta coordenadas de
+              empresas e eventos cadastrados. Ele não rastreia o deslocamento do
+              usuário nem solicita a localização do aparelho.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-section" id="bases-legais">
+          <h2>4. Bases legais</h2>
+          <p>
+            Conforme o contexto, o tratamento pode se apoiar nas seguintes bases
+            legais previstas na LGPD:
+          </p>
+          <ul>
+            <li>
+              <strong>legítimo interesse</strong>, para operar, proteger e
+              aprimorar o aplicativo, respeitando os direitos e expectativas dos
+              usuários;
+            </li>
+            <li>
+              <strong>execução de procedimentos solicitados pelo titular</strong
+              >, quando o usuário escolhe abrir um link, compartilhar conteúdo
+              ou iniciar contato externo;
+            </li>
+            <li>
+              <strong>cumprimento de obrigação legal ou regulatória</strong>,
+              quando aplicável;
+            </li>
+            <li>
+              <strong>exercício regular de direitos</strong> em processos
+              judiciais, administrativos ou arbitrais.
+            </li>
+          </ul>
+        </section>
+
+        <section class="policy-section" id="compartilhamento">
+          <h2>5. Compartilhamento de informações</h2>
+          <p>
+            Não vendemos nem alugamos dados pessoais. Informações podem ser
+            processadas por prestadores necessários ao funcionamento do
+            aplicativo, dentro das finalidades descritas nesta política, ou
+            compartilhadas quando houver obrigação legal, ordem de autoridade
+            competente, proteção de direitos ou prevenção de fraude.
+          </p>
+          <p>
+            Quando você escolhe abrir WhatsApp, Instagram, um aplicativo de
+            mapas, uma página de ingressos ou a função de compartilhamento do
+            aparelho, passa a interagir diretamente com o serviço selecionado. O
+            tratamento realizado por esse terceiro segue os próprios termos e
+            políticas dele.
+          </p>
+        </section>
+
+        <section class="policy-section" id="servicos-terceiros">
+          <h2>6. Serviços de terceiros</h2>
+          <p>O Ipueiras+ utiliza ou pode utilizar os seguintes serviços:</p>
+          <ul>
+            <li>
+              <strong>Supabase:</strong> infraestrutura de banco de dados,
+              armazenamento e entrega dos conteúdos públicos do aplicativo;
+            </li>
+            <li>
+              <strong>WeatherAPI:</strong> fornecimento da condição
+              meteorológica referente à cidade de Ipueiras;
+            </li>
+            <li>
+              <strong>Google Maps ou Apple Maps:</strong> renderização nativa do
+              mapa e abertura opcional de coordenadas para orientação;
+            </li>
+            <li>
+              <strong>serviços do sistema operacional:</strong> compartilhamento
+              de imagens e abertura de links em aplicativos instalados.
+            </li>
+          </ul>
+          <p>
+            Esses fornecedores podem processar dados técnicos necessários à
+            comunicação, inclusive em outros países, de acordo com suas próprias
+            políticas e medidas de proteção. Procuramos utilizar somente os
+            serviços necessários ao funcionamento das funcionalidades
+            oferecidas.
+          </p>
+        </section>
+
+        <section class="policy-section" id="armazenamento">
+          <h2>7. Armazenamento e retenção</h2>
+          <p>
+            Conservamos informações pelo tempo necessário para cumprir as
+            finalidades descritas, atender requisitos legais, proteger direitos
+            e manter a segurança do serviço. Registros técnicos e métricas podem
+            ter prazos diferentes conforme sua natureza e as configurações dos
+            provedores utilizados.
+          </p>
+          <p>
+            Conteúdos armazenados localmente em cache permanecem no aparelho e
+            podem ser removidos pelo sistema operacional, pela limpeza dos dados
+            do aplicativo ou pela desinstalação. Informações podem ser
+            preservadas por período adicional quando necessário para obrigação
+            legal, auditoria, prevenção de fraude ou exercício de direitos.
+          </p>
+        </section>
+
+        <section class="policy-section" id="seguranca">
+          <h2>8. Segurança das informações</h2>
+          <p>
+            Adotamos medidas técnicas e organizacionais proporcionais à natureza
+            do serviço, incluindo comunicação segura, controles de acesso e
+            restrições na infraestrutura de dados. Apesar dos cuidados adotados,
+            nenhum sistema conectado à internet é completamente imune a
+            incidentes.
+          </p>
+          <p>
+            Caso seja identificado um incidente relevante envolvendo dados
+            pessoais, adotaremos as providências cabíveis e realizaremos as
+            comunicações exigidas pela legislação aplicável.
+          </p>
+        </section>
+
+        <section class="policy-section" id="links">
+          <h2>9. Links, mapas e compartilhamento</h2>
+          <p>
+            O aplicativo apresenta informações públicas fornecidas por
+            anunciantes, organizadores, empresas ou fontes locais e pode conter
+            links para páginas e aplicativos externos. Não controlamos o
+            conteúdo, a disponibilidade ou as práticas de privacidade desses
+            ambientes externos.
+          </p>
+          <p>
+            O compartilhamento de uma notícia, evento ou aviso ocorre somente
+            quando o usuário aciona essa função. A imagem é gerada no aparelho e
+            encaminhada ao menu de compartilhamento do sistema, onde o próprio
+            usuário escolhe o destino.
+          </p>
+        </section>
+
+        <section class="policy-section" id="direitos">
+          <h2>10. Direitos do titular</h2>
+          <p>
+            Nos termos da LGPD e observadas as hipóteses legais, o titular pode
+            solicitar:
+          </p>
+          <ul>
+            <li>confirmação da existência de tratamento;</li>
+            <li>acesso aos dados;</li>
+            <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li>
+              anonimização, bloqueio ou eliminação de dados desnecessários ou
+              tratados em desconformidade;
+            </li>
+            <li>
+              informações sobre compartilhamento e consequências de eventual
+              negativa de consentimento;
+            </li>
+            <li>
+              revogação do consentimento, quando esta for a base legal
+              aplicável;
+            </li>
+            <li>
+              oposição ao tratamento realizado em desconformidade com a
+              legislação;
+            </li>
+            <li>
+              revisão de decisões tomadas unicamente com base em tratamento
+              automatizado, quando aplicável.
+            </li>
+          </ul>
+          <p>
+            Como o Ipueiras+ não exige uma conta e busca não identificar
+            individualmente os usuários, pode ser necessário solicitar
+            informações adicionais para localizar eventuais registros e
+            confirmar a identidade do solicitante, sempre com o objetivo de
+            evitar acesso indevido a informações de terceiros.
+          </p>
+        </section>
+
+        <section class="policy-section" id="criancas">
+          <h2>11. Crianças e adolescentes</h2>
+          <p>
+            O Ipueiras+ é um serviço informativo de caráter geral e não é
+            direcionado à coleta de dados pessoais de crianças. Não solicitamos
+            cadastro nem informações pessoais diretamente de menores de idade.
+            Se você acredita que uma criança forneceu dados pessoais por meio de
+            algum canal relacionado ao serviço, entre em contato para que
+            possamos avaliar e adotar as providências adequadas.
+          </p>
+        </section>
+
+        <section class="policy-section" id="alteracoes">
+          <h2>12. Alterações desta política</h2>
+          <p>
+            Esta política pode ser atualizada para refletir mudanças no
+            aplicativo, nos serviços utilizados ou na legislação. A versão
+            vigente será disponibilizada nesta página com a data da última
+            atualização. Mudanças relevantes poderão ser comunicadas também
+            dentro do aplicativo ou por outros meios apropriados.
+          </p>
+        </section>
+
+        <section class="policy-section" id="contato">
+          <h2>13. Contato e responsável</h2>
+          <p>
+            Para dúvidas sobre esta política, solicitações relacionadas à
+            privacidade ou exercício dos direitos previstos na LGPD, utilize o
+            canal abaixo.
+          </p>
+          <div class="contact-card">
+            <span class="contact-label">Responsável pelo aplicativo</span>
+            <div class="contact-value">Ipueiras+</div>
+            <span class="contact-label" style="margin-top: 18px"
+              >E-mail de privacidade</span
+            >
+            <!-- SUBSTITUA O TEXTO ABAIXO PELO E-MAIL OFICIAL ANTES DE PUBLICAR. -->
+            <div class="contact-value">rcodev26developer@gmail.com</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 Ipueiras+. Todos os direitos reservados.</span>
+        <span>Informação local, com transparência.</span>
+      </div>
+    </footer>
+  </body>
+</html>

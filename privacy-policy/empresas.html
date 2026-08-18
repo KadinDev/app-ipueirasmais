@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070313" />
+    <meta
+      name="description"
+      content="Cadastre sua empresa no Ipueiras+ e apresente seu negócio para quem vive em Ipueiras."
+    />
+    <title>Empresas | Ipueiras+</title>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegação principal">
+        <a class="brand" href="index.html"
+          ><img src="brand-logo.png" alt="" /><span>Ipueiras<b>+</b></span></a
+        ><button
+          class="menu-button"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          ☰
+        </button>
+        <div class="nav-links" data-menu>
+          <a href="index.html">Início</a
+          ><a class="active" href="empresas.html">Empresas</a
+          ><a href="eventos.html">Eventos</a
+          ><a href="index.html#planos">Planos</a
+          ><a href="privacidade.html">Privacidade</a
+          ><a
+            class="nav-action"
+            href="https://wa.me/5588993723747"
+            target="_blank"
+            rel="noreferrer"
+            >Fale conosco</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="index.html">Início</a> / Empresas
+          </div>
+          <span class="eyebrow">Comércio local mais conectado</span>
+          <h1>Coloque sua empresa no Ipueiras+.</h1>
+          <p>
+            Apresente seu negócio com informações completas, facilite o contato
+            e ajude moradores a encontrarem produtos e serviços da cidade.
+            Preencha os dados abaixo; nossa equipe revisará tudo antes de
+            conversar com você e publicar.
+          </p>
+        </div>
+      </section>
+
+      <div class="page-grid container">
+        <aside class="side-info">
+          <div class="info-box">
+            <h3>Valor simbólico — R$ 9,90/mês</h3>
+            <p>
+              Esse pequeno valor ajuda a manter os gastos de armazenamento,
+              atualização e organização das informações da empresa no banco de
+              dados do Ipueiras+. Assim, o perfil continua disponível, correto
+              e fácil de encontrar no aplicativo.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Tenha em mãos</h3>
+            <ul>
+              <li>Logo quadrada</li>
+              <li>Foto de capa horizontal</li>
+              <li>Endereço completo; dados do mapa são opcionais</li>
+              <li>Horários atualizados</li>
+              <li>WhatsApp e Instagram</li>
+            </ul>
+          </div>
+          <div class="privacy-note">
+            O site não envia nem armazena automaticamente este formulário. Os
+            dados são organizados no seu aparelho para você copiar e encaminhar
+            ao Ipueiras+ pelo WhatsApp.
+          </div>
+        </aside>
+
+        <form class="form-shell" data-submission-form="company">
+          <div class="form-intro">
+            <span class="section-kicker">Solicitação de cadastro</span>
+            <h2>Informações da empresa</h2>
+            <p>
+              Campos com <span class="required">*</span> são obrigatórios. O
+              envio não garante publicação e nenhuma cobrança é feita nesta
+              página.
+            </p>
+          </div>
+
+          <section class="form-section">
+            <h3>Responsável pelo envio</h3>
+            <p>
+              Usaremos esses dados somente para confirmar as informações e
+              conversar sobre a publicação.
+            </p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="responsible_name"
+                  >Nome completo <span class="required">*</span></label
+                ><input
+                  id="responsible_name"
+                  name="responsible_name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="responsible_whatsapp"
+                  >WhatsApp <span class="required">*</span></label
+                ><input
+                  id="responsible_whatsapp"
+                  name="responsible_whatsapp"
+                  inputmode="tel"
+                  placeholder="88 99999 9999"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="responsible_email">E-mail</label
+                ><input
+                  id="responsible_email"
+                  name="responsible_email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="contato@empresa.com.br"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Identificação da empresa</h3>
+            <p>Escreva como as informações devem aparecer para os usuários.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name"
+                  >Nome da empresa <span class="required">*</span></label
+                ><input id="name" name="name" required />
+              </div>
+              <div class="field">
+                <label for="category_name"
+                  >Categoria <span class="required">*</span></label
+                ><input
+                  id="category_name"
+                  name="category_name"
+                  list="company-categories"
+                  placeholder="Ex.: Restaurante"
+                  required
+                /><datalist id="company-categories">
+                  <option value="Alimentação"></option>
+                  <option value="Moda"></option>
+                  <option value="Saúde"></option>
+                  <option value="Beleza"></option>
+                  <option value="Serviços"></option>
+                  <option value="Construção"></option>
+                  <option value="Tecnologia"></option>
+                  <option value="Educação"></option>
+                  <option value="Automotivo"></option>
+                  <option value="Comércio"></option>
+                </datalist>
+              </div>
+              <div class="field full">
+                <label for="description"
+                  >Descrição <span class="required">*</span></label
+                ><textarea
+                  id="description"
+                  name="description"
+                  maxlength="1200"
+                  placeholder="Conte o que sua empresa oferece, seus diferenciais e para quem trabalha."
+                  required
+                ></textarea
+                ><span class="hint"
+                  >Evite escrever tudo em letras maiúsculas.</span
+                >
+              </div>
+              <input type="hidden" name="requested_plan" value="basic" />
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Endereço e localização</h3>
+            <p>
+              O endereço será exibido junto ao mapa. O link do Google Maps,
+              latitude e longitude são opcionais. Se você não souber essas
+              informações, deixe os campos em branco: a equipe do Ipueiras+
+              localizará e cadastrará o ponto correto para você.
+            </p>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="address_line"
+                  >Endereço completo <span class="required">*</span></label
+                ><input
+                  id="address_line"
+                  name="address_line"
+                  placeholder="Rua, número e complemento"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="neighborhood"
+                  >Bairro <span class="required">*</span></label
+                ><input id="neighborhood" name="neighborhood" required />
+              </div>
+              <div class="field">
+                <label for="maps_url">Link do Google Maps (opcional)</label
+                ><input
+                  id="maps_url"
+                  name="maps_url"
+                  type="url"
+                  placeholder="https://maps.app.goo.gl/..."
+                />
+              </div>
+              <div class="field">
+                <label for="latitude">Latitude (opcional)</label
+                ><input
+                  id="latitude"
+                  name="latitude"
+                  inputmode="decimal"
+                  placeholder="-4.538..."
+                />
+              </div>
+              <div class="field">
+                <label for="longitude">Longitude (opcional)</label
+                ><input
+                  id="longitude"
+                  name="longitude"
+                  inputmode="decimal"
+                  placeholder="-40.711..."
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Contatos públicos</h3>
+            <p>Esses contatos poderão aparecer no perfil da empresa.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="company_whatsapp"
+                  >WhatsApp da empresa <span class="required">*</span></label
+                ><input
+                  id="company_whatsapp"
+                  name="company_whatsapp"
+                  inputmode="tel"
+                  placeholder="88 99999 9999"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="phone">Telefone</label
+                ><input id="phone" name="phone" inputmode="tel" />
+              </div>
+              <div class="field full">
+                <label for="instagram">Instagram</label
+                ><input
+                  id="instagram"
+                  name="instagram"
+                  placeholder="@suaempresa ou link completo"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Horários de funcionamento</h3>
+            <p>Marque “Fechado” nos dias sem atendimento.</p>
+            <div class="hours-grid">
+              <div class="hours-row">
+                <strong>Domingo</strong
+                ><input
+                  aria-label="Abertura no domingo"
+                  name="domingo_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento no domingo"
+                  name="domingo_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="domingo_closed" type="checkbox" />
+                  Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Segunda</strong
+                ><input
+                  aria-label="Abertura na segunda"
+                  name="segunda_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento na segunda"
+                  name="segunda_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="segunda_closed" type="checkbox" />
+                  Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Terça</strong
+                ><input
+                  aria-label="Abertura na terça"
+                  name="terca_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento na terça"
+                  name="terca_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="terca_closed" type="checkbox" /> Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Quarta</strong
+                ><input
+                  aria-label="Abertura na quarta"
+                  name="quarta_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento na quarta"
+                  name="quarta_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="quarta_closed" type="checkbox" /> Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Quinta</strong
+                ><input
+                  aria-label="Abertura na quinta"
+                  name="quinta_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento na quinta"
+                  name="quinta_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="quinta_closed" type="checkbox" /> Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Sexta</strong
+                ><input
+                  aria-label="Abertura na sexta"
+                  name="sexta_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento na sexta"
+                  name="sexta_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="sexta_closed" type="checkbox" /> Fechado</label
+                >
+              </div>
+              <div class="hours-row">
+                <strong>Sábado</strong
+                ><input
+                  aria-label="Abertura no sábado"
+                  name="sabado_open"
+                  type="time"
+                /><input
+                  aria-label="Fechamento no sábado"
+                  name="sabado_close"
+                  type="time"
+                /><label class="checkbox"
+                  ><input name="sabado_closed" type="checkbox" /> Fechado</label
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Imagens da empresa</h3>
+            <p>
+              O envio de imagens não é feito por este formulário. Depois de
+              preencher os dados e tocar em “Enviar no WhatsApp”, envie também
+              diretamente para a
+              equipe do Ipueiras+ a logo quadrada e uma foto de capa
+              horizontal. Prefira imagens nítidas, autorizadas e sem texto
+              cortado.
+            </p>
+          </section>
+
+          <section class="form-section">
+            <label class="checkbox"
+              ><input name="confirmation" type="checkbox" required /> Confirmo
+              que as informações são verdadeiras, estão atualizadas e tenho
+              autorização para representar esta empresa e enviar as imagens à
+              equipe pelo WhatsApp.
+              <span class="required">*</span></label
+            >
+          </section>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="button" data-whatsapp>
+              Enviar no WhatsApp</button
+            >
+          </div>
+          <div class="form-status" role="status" data-status></div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer container">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="brand-logo.png" alt="" /><span>Ipueiras<b>+</b></span></a
+          >
+          <div class="footer-copy">
+            Informação local, oportunidades e conexão em um só lugar.
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Início</a><a href="eventos.html">Eventos</a
+          ><a href="privacidade.html">Privacidade</a
+          ><a
+            href="https://www.instagram.com/ipueirasmais/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>

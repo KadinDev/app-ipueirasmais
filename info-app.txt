@@ -1,0 +1,225 @@
+******************************************************************
+******************************************************************
+******************************************************************
+
+  TEMPO DE CACHE ATUALMENTE NO IPUEIRAS+
+
+Home	                        20 minutos
+Notícias	                    20 minutos
+Detalhe da notícia	          20 minutos
+Avisos da Prefeitura	        20 minutos
+Detalhe do aviso	            20 minutos
+Novidades da cidade	          20 minutos
+Eventos	                      40 minutos
+Detalhe do evento	            40 minutos
+Vagas	                        40 minutos
+Promoções	                    40 minutos
+Empresas	                    2 horas
+Detalhe da empresa	          2 horas
+Clima	                        2 horas
+Farmácia de plantão	          4 horas
+Serviços úteis	              4 horas
+Atualização do app	          10 horas
+Categorias	                  24 horas
+
+  Atualização manual ao puxar a tela:
+
+Regra geral:                pode consultar novamente após 5 minutos.
+Clima:                      intervalo de 2 horas.
+Configuração da versão:     intervalo de 10 horas.
+
+
+Estão dentro da pasta cache, o useCachedOperation o que faz:
+- busca cache no AsyncStorage;
+- mostra cache se existir;
+- só chama Supabase se o cache tiver mais de 20 min;
+- no pull-to-refresh, só chama Supabase se passou 5 min da última busca real;
+- salva o resultado novo no AsyncStorage;
+- retorna data, loading, refreshing, refetch, refreshIfStale.
+
+e na pasta Home / operations / useHome
+
+e na minha index (Home principal)
+- useFocusEffect para verificar cache ao voltar para Home;
+- RefreshControl para pull-to-refresh.
+
+!!!! OBS: Se em tela das Empresas e Eventos o usuário atualizar com pull-to-refresh, a tela de detalhes continua
+usando o cache de 40 minutos
+
+******************************************************************
+******************************************************************
+******************************************************************
+
+      TELA EVENTOS
+Nos eventos, o app só recebe eventos publicados que ainda não terminaram. A regra no Supabase está assim:
+  
+  status = 'published'
+  and coalesce(ends_at, starts_at) >= now() - interval '6 hours'
+
+Ou seja:
+- se tiver Fim do evento (ends_at), ele usa essa data para decidir;
+- se não tiver fim, usa o Início do evento (starts_at);
+- depois que passa, ele ainda pode ficar visível por até 6 horas;
+- após esse período, sai automaticamente das listas públicas do app.
+Então você não precisa excluir na hora. Ele deixa de aparecer sozinho. 
+Depois você pode usar a tela Expirados no dashboard para arquivar ou excluir com calma.
+
+
+
+
+Trabalhar na tela:
+
+ - - EAS
+
+
+******************************************************************
+
+
+Minha ordem seria:
+    Atualizar o Expo 54.
+    Configurar mapa Android e EAS.
+    Auditar Supabase/RLS.
+    Validar banners e destaques.
+    Gerar APK release.
+    Fazer checklist completo em aparelho físico.
+    Preparar política, screenshots e cadastro da Play Store.
+    Gerar AAB final.
+
+Minha avaliação: 
+    O desenvolvimento visual e funcional está em aproximadamente 90%. 
+    O que falta agora é principalmente endurecimento, validação de produção e preparação para a loja — não grandes funcionalidades.
+
+******************************************************************
+
+
+Quero implementar as notificações push do Ipueiras+ no aplicativo.
+
+O dashboard já está preparado para enviar notificações com destino opcional. Faça a implementação completa, profissional e segura no app, preservando a arquitetura atual, o TanStack Query, o cache persistido e a economia de consultas ao Supabase.
+
+COMPORTAMENTO ESPERADO
+
+1. Push apenas recebido:
+- Exibir normalmente a notificação.
+- Não navegar automaticamente.
+- Não consultar o Supabase.
+- Não invalidar cache.
+- Não interromper a tela que o usuário estiver utilizando.
+
+2. Push tocado com destino:
+- Ler o tipo e o ID recebidos no payload.
+- Invalidar somente os caches relacionados ao destino.
+- Navegar diretamente para a tela correspondente usando o Expo Router.
+- O conteúdo selecionado deve aparecer atualizado.
+- Não limpar nem invalidar todo o cache do aplicativo.
+
+3. Push tocado sem destino:
+- Abrir o aplicativo normalmente na Home.
+- Não invalidar caches.
+- Não realizar consultas adicionais apenas por causa do push.
+
+DESTINOS
+
+- Aviso da Prefeitura:
+  type: "alert" ou o valor equivalente enviado pelo dashboard.
+  Rota: /alert-details/{id}
+  Invalidar: lista de avisos, detalhe do aviso e Home.
+
+- Notícia:
+  type: "news"
+  Rota: /news-details/{id}
+  Invalidar: lista de notícias, detalhe da notícia e Home.
+
+- Evento:
+  type: "event"
+  Rota: /event-details/{id}
+  Invalidar: lista de eventos, detalhe do evento e Home.
+
+- Empresa:
+  type: "company"
+  Rota: /company-details/{id}
+  Invalidar: lista de empresas, detalhe da empresa e Home.
+
+- Promoção:
+  type: "promotion"
+  Abrir a tela/lista de promoções.
+  Invalidar: promoções e Home.
+
+- Vaga:
+  type: "job"
+  Abrir a tela/lista de vagas.
+  Invalidar: vagas e Home.
+
+- Novidade:
+  type: "cityUpdate" ou o valor equivalente enviado pelo dashboard.
+  Abrir a tela/lista de novidades.
+  Invalidar: novidades e Home.
+
+- Sem destino:
+  type: "none", nulo ou ausente.
+  Abrir somente a Home, sem invalidar cache.
+
+REGRAS IMPORTANTES
+
+- Antes de implementar, examine o formato real do payload produzido pelo dashboard. Não presuma os nomes dos campos ou valores.
+- Padronize e valide o payload recebido.
+- Aceite com segurança possíveis aliases já enviados pelo dashboard, como notice, aviso e alert.
+- Ignore tipos ou IDs inválidos sem provocar erro ou fechamento do app.
+- Caso o destino seja desconhecido, abra somente a Home.
+- A navegação precisa funcionar com o app aberto, em segundo plano e completamente fechado.
+- Evite navegação duplicada quando o app processar a mesma notificação mais de uma vez.
+- Não navegar ao receber o push em primeiro plano; navegar somente quando o usuário tocar.
+- Trate corretamente as permissões de notificação.
+- Armazene e atualize o Expo Push Token no Supabase.
+- Considere troca do token, reinstalação do aplicativo, logout se existir futuramente e tokens inválidos.
+- Configure corretamente Android e iOS, incluindo canal do Android, credenciais e permissões.
+- Teste em dispositivos físicos e development builds/EAS Build; não depender apenas do Expo Go.
+- Não coloque chaves administrativas ou service role do Supabase dentro do app.
+- O app deve registrar apenas o token do próprio dispositivo usando uma operação segura.
+- A remoção de tokens inválidos deve acontecer no backend/dashboard.
+
+TANSTACK QUERY E ECONOMIA
+
+- Receber a notificação não deve executar consulta.
+- Somente o toque em uma notificação com destino deve invalidar consultas.
+- Invalidar apenas Home, lista correspondente e detalhe correspondente.
+- Não usar removeQueries, clear ou invalidação geral.
+- Após a invalidação, a tela aberta pode consultar somente os dados necessários.
+- Push sem destino não deve causar consulta adicional.
+- Manter os tempos atuais de cache:
+  Home: 20 minutos
+  Notícias: 20 minutos
+  Avisos: 20 minutos
+  Eventos: 40 minutos
+  Vagas: 40 minutos
+  Promoções: 40 minutos
+  Empresas: 2 horas
+  Categorias: 24 horas
+  Clima: 2 horas
+  Novidades da cidade: 20 minutos
+
+ESTRUTURA DO PAYLOAD
+
+O dashboard deverá fornecer pelo menos o tipo do destino e, quando necessário, o ID relacionado. Exemplos conceituais:
+
+{ "type": "alert", "id": "uuid-do-aviso" }
+{ "type": "event", "id": "uuid-do-evento" }
+{ "type": "company", "id": "uuid-da-empresa" }
+{ "type": "none" }
+
+Esses exemplos são conceituais. Primeiro confira o payload real do dashboard e adapte o aplicativo a ele.
+
+VALIDAÇÃO OBRIGATÓRIA
+
+Crie testes para:
+- interpretação e validação do payload;
+- aliases de tipos;
+- destino desconhecido;
+- ausência de ID;
+- prevenção de navegação duplicada;
+- mapeamento de cada destino para sua rota;
+- invalidação seletiva;
+- push sem destino;
+- notificação recebida sem toque;
+- abertura com app ativo, em segundo plano e fechado.
+
+Execute TypeScript, ESLint, testes, Expo Doctor e valide builds/exportações relevantes. Preserve completamente o funcionamento atual do Ipueiras+.

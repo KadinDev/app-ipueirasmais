@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070313" />
+    <meta
+      name="description"
+      content="Envie gratuitamente seu evento para análise e publicação no Ipueiras+."
+    />
+    <title>Eventos | Ipueiras+</title>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegação principal">
+        <a class="brand" href="index.html"
+          ><img src="brand-logo.png" alt="" /><span>Ipueiras<b>+</b></span></a
+        ><button
+          class="menu-button"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          ☰
+        </button>
+        <div class="nav-links" data-menu>
+          <a href="index.html">Início</a><a href="empresas.html">Empresas</a
+          ><a class="active" href="eventos.html">Eventos</a
+          ><a href="index.html#planos">Planos</a
+          ><a href="privacidade.html">Privacidade</a
+          ><a
+            class="nav-action"
+            href="https://wa.me/5588993723747"
+            target="_blank"
+            rel="noreferrer"
+            >Fale conosco</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="index.html">Início</a> / Eventos
+          </div>
+          <span class="eyebrow">Agenda feita com a cidade</span>
+          <h1>Divulgue gratuitamente seu evento.</h1>
+          <p>
+            Ajude moradores a descobrirem o que vai acontecer em Ipueiras.
+            Preencha as informações e toque em “Enviar no WhatsApp”. A mensagem
+            será aberta com os dados preenchidos para você conferir e enviar.
+            Analisaremos o conteúdo antes de confirmar a publicação.
+          </p>
+        </div>
+      </section>
+
+      <div class="page-grid container">
+        <aside class="side-info">
+          <div class="info-box">
+            <h3>Evento comum — gratuito</h3>
+            <p>
+              Página com título, descrição, data, local, mapa, valores,
+              ingressos e contato.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Destaque + push — R$ 50</h3>
+            <p>
+              Posição de destaque e comunicação conforme critérios,
+              disponibilidade e preferências dos usuários.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Antes de enviar</h3>
+            <ul>
+              <li>Confirme data e horário</li>
+              <li>Informe endereço correto</li>
+              <li>Use imagem autorizada</li>
+              <li>Explique entrada ou ingressos</li>
+              <li>Forneça um contato válido</li>
+            </ul>
+          </div>
+          <div class="privacy-note">
+            O site não envia nem armazena automaticamente este formulário. Os
+            dados são organizados no seu aparelho para você copiar e encaminhar
+            ao Ipueiras+ pelo WhatsApp.
+          </div>
+        </aside>
+
+        <form class="form-shell" data-submission-form="event">
+          <div class="form-intro">
+            <span class="section-kicker">Solicitação de publicação</span>
+            <h2>Informações do evento</h2>
+            <p>
+              Campos com <span class="required">*</span> são obrigatórios.
+              Eventos relacionados a Ipueiras podem ser enviados gratuitamente.
+            </p>
+          </div>
+
+          <section class="form-section">
+            <h3>Responsável pelo envio</h3>
+            <p>
+              Precisamos de um contato para confirmar informações e solicitar
+              ajustes, se necessário.
+            </p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="responsible_name"
+                  >Nome completo <span class="required">*</span></label
+                ><input
+                  id="responsible_name"
+                  name="responsible_name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="responsible_whatsapp"
+                  >WhatsApp <span class="required">*</span></label
+                ><input
+                  id="responsible_whatsapp"
+                  name="responsible_whatsapp"
+                  inputmode="tel"
+                  placeholder="88 99999 9999"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="responsible_email">E-mail</label
+                ><input
+                  id="responsible_email"
+                  name="responsible_email"
+                  type="email"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Apresentação do evento</h3>
+            <p>Essas informações serão usadas na página pública do evento.</p>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="title"
+                  >Nome do evento <span class="required">*</span></label
+                ><input id="title" name="title" required />
+              </div>
+              <div class="field">
+                <label for="category_name"
+                  >Categoria <span class="required">*</span></label
+                ><input
+                  id="category_name"
+                  name="category_name"
+                  list="event-categories"
+                  placeholder="Ex.: Música"
+                  required
+                /><datalist id="event-categories">
+                  <option value="Cultura"></option>
+                  <option value="Música"></option>
+                  <option value="Esporte"></option>
+                  <option value="Religioso"></option>
+                  <option value="Gastronomia"></option>
+                  <option value="Educação"></option>
+                  <option value="Negócios"></option>
+                  <option value="Comunidade"></option>
+                  <option value="Festa"></option>
+                </datalist>
+              </div>
+              <div class="field">
+                <label for="requested_plan">Formato desejado</label
+                ><select id="requested_plan" name="requested_plan">
+                  <option value="basic">Publicação gratuita</option>
+                  <option value="event_featured">
+                    Destaque + push — R$ 50
+                  </option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="description"
+                  >Descrição completa <span class="required">*</span></label
+                ><textarea
+                  id="description"
+                  name="description"
+                  maxlength="1800"
+                  placeholder="Explique o objetivo, atrações, programação e informações importantes."
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Data e horário</h3>
+            <p>
+              Confira com atenção. Alterações depois da publicação precisam ser
+              comunicadas imediatamente.
+            </p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="starts_at"
+                  >Início <span class="required">*</span></label
+                ><input
+                  id="starts_at"
+                  name="starts_at"
+                  type="datetime-local"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="ends_at">Término</label
+                ><input id="ends_at" name="ends_at" type="datetime-local" />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Localização</h3>
+            <p>
+              O link do Google Maps, latitude e longitude são opcionais. Se
+              você não souber essas informações, deixe os campos em branco: a
+              equipe do Ipueiras+ localizará e cadastrará o ponto correto para
+              você.
+            </p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="venue_name"
+                  >Nome do local <span class="required">*</span></label
+                ><input
+                  id="venue_name"
+                  name="venue_name"
+                  placeholder="Ex.: Praça principal"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="neighborhood">Bairro</label
+                ><input id="neighborhood" name="neighborhood" />
+              </div>
+              <div class="field full">
+                <label for="address_line"
+                  >Endereço <span class="required">*</span></label
+                ><input
+                  id="address_line"
+                  name="address_line"
+                  placeholder="Rua, número e referência"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="maps_url">Link do Google Maps (opcional)</label
+                ><input
+                  id="maps_url"
+                  name="maps_url"
+                  type="url"
+                  placeholder="https://maps.app.goo.gl/..."
+                />
+              </div>
+              <div class="field">
+                <label for="latitude">Latitude (opcional)</label
+                ><input id="latitude" name="latitude" inputmode="decimal" />
+              </div>
+              <div class="field">
+                <label for="longitude">Longitude (opcional)</label
+                ><input id="longitude" name="longitude" inputmode="decimal" />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Entrada, contato e ingressos</h3>
+            <p>
+              Deixe claro se é gratuito, quanto custa e onde o usuário encontra
+              mais informações.
+            </p>
+            <div class="form-grid">
+              <div class="field full">
+                <label class="checkbox"
+                  ><input id="is_free" name="is_free" type="checkbox" /> Este
+                  evento é gratuito</label
+                >
+              </div>
+              <div class="field">
+                <label for="price_label">Valor ou descrição da entrada</label
+                ><input
+                  id="price_label"
+                  name="price_label"
+                  placeholder="Ex.: R$ 20 antecipado"
+                />
+              </div>
+              <div class="field">
+                <label for="event_whatsapp">WhatsApp do evento</label
+                ><input
+                  id="event_whatsapp"
+                  name="event_whatsapp"
+                  inputmode="tel"
+                  placeholder="88 99999 9999"
+                />
+              </div>
+              <div class="field full">
+                <label for="ticket_url">Link para ingressos ou inscrição</label
+                ><input
+                  id="ticket_url"
+                  name="ticket_url"
+                  type="url"
+                  placeholder="https://..."
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Imagem de divulgação</h3>
+            <p>
+              O envio da imagem não é feito por este formulário. Depois de
+              preencher os dados e tocar em “Enviar no WhatsApp”, envie também
+              diretamente para a
+              equipe do Ipueiras+ a imagem de divulgação do evento. Prefira uma
+              imagem horizontal, nítida, autorizada e com as informações
+              legíveis.
+            </p>
+          </section>
+
+          <section class="form-section">
+            <label class="checkbox"
+              ><input name="confirmation" type="checkbox" required /> Confirmo
+              que os dados são verdadeiros, tenho autorização para divulgar o
+              evento e utilizar a imagem que enviarei à equipe pelo WhatsApp.
+              <span class="required">*</span></label
+            >
+          </section>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="button" data-whatsapp>
+              Enviar no WhatsApp</button
+            >
+          </div>
+          <div class="form-status" role="status" data-status></div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer container">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="brand-logo.png" alt="" /><span>Ipueiras<b>+</b></span></a
+          >
+          <div class="footer-copy">
+            Informação local, oportunidades e conexão em um só lugar.
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Início</a><a href="empresas.html">Empresas</a
+          ><a href="privacidade.html">Privacidade</a
+          ><a
+            href="https://www.instagram.com/ipueirasmais/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>
