@@ -13,6 +13,7 @@ web-build/
 .DS_Store
 Thumbs.db
 ReactotronConfig.js
+info-app.txt
 
 
 expo-env.d.ts
